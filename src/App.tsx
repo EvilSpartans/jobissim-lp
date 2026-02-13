@@ -9,17 +9,19 @@ import Index from "./pages/Index";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <LanguageProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
+  <div className="react-landing">
+    <QueryClientProvider client={queryClient}>
+      <LanguageProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
 
-        {/* PAS DE ROUTER */}
-        <Index />
-      </TooltipProvider>
-    </LanguageProvider>
-  </QueryClientProvider>
+          {/* PAS DE ROUTER */}
+          <Index />
+        </TooltipProvider>
+      </LanguageProvider>
+    </QueryClientProvider>
+  </div>
 );
 
 export default App;
