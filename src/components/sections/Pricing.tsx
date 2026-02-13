@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Check, ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { AnchorLink } from "@/components/AnchorLink";
 
 export function Pricing() {
   const { t } = useLanguage();
@@ -109,10 +110,10 @@ export function Pricing() {
                 variant={plan.popular ? "default" : "default"}
                 asChild>
 
-                  <a href="#demo" className="flex items-center justify-center gap-2">
+                  <AnchorLink to="demo" className="flex items-center justify-center gap-2">
                     {plan.cta}
                     <ArrowRight className="w-4 h-4" />
-                  </a>
+                  </AnchorLink>
                 </Button>
               </div>
             </motion.div>

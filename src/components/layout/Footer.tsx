@@ -1,63 +1,44 @@
 import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useRouting } from "@/contexts/RoutingContext";
+
 export function Footer() {
-  const {
-    t
-  } = useLanguage();
+  const { t } = useLanguage();
+  const { buildAnchor, baseUrl } = useRouting();
+  const logoHref = baseUrl ? `${baseUrl}#` : "#";
+
   const footerLinks = {
-    plateforme: [{
-      label: t("nav.cvVideo"),
-      href: "#cv-video"
-    }, {
-      label: t("nav.cvIA"),
-      href: "#cv-ia"
-    }, {
-      label: t("nav.simulation"),
-      href: "#simulation"
-    }, {
-      label: t("nav.matching"),
-      href: "#matching"
-    }, {
-      label: t("nav.guide"),
-      href: "#guide"
-    }],
-    solutions: [{
-      label: t("audience.btob.schools"),
-      href: "#ecoles"
-    }, {
-      label: t("audience.btob.training"),
-      href: "#organismes"
-    }, {
-      label: t("audience.btob.employment"),
-      href: "#acteurs-emploi"
-    }, {
-      label: t("audience.btob.interim"),
-      href: "#interim"
-    }],
-    produits: [{
-      label: "JobiBox",
-      href: "#jobibox"
-    }, {
-      label: "JobiTruck",
-      href: "#jobitruck"
-    }, {
-      label: t("nav.pricing"),
-      href: "#tarifs"
-    }, {
-      label: t("nav.demo"),
-      href: "#demo"
-    }],
-    legal: [{
-      label: t("footer.legal"),
-      href: "#mentions-legales"
-    }]
+    plateforme: [
+      { label: t("nav.cvVideo"), href: buildAnchor("cv-video") },
+      { label: t("nav.cvIA"), href: buildAnchor("cv-ia") },
+      { label: t("nav.simulation"), href: buildAnchor("simulation") },
+      { label: t("nav.matching"), href: buildAnchor("matching") },
+      { label: t("nav.guide"), href: buildAnchor("guide") },
+    ],
+    solutions: [
+      { label: t("audience.btob.schools"), href: buildAnchor("ecoles") },
+      { label: t("audience.btob.training"), href: buildAnchor("organismes") },
+      { label: t("audience.btob.employment"), href: buildAnchor("acteurs-emploi") },
+      { label: t("audience.btob.interim"), href: buildAnchor("interim") },
+    ],
+    produits: [
+      { label: "JobiBox", href: buildAnchor("jobibox") },
+      { label: "JobiTruck", href: buildAnchor("jobitruck") },
+      { label: t("nav.pricing"), href: buildAnchor("tarifs") },
+      { label: t("nav.demo"), href: buildAnchor("demo") },
+    ],
+    legal: [
+      { label: t("footer.legal"), href: buildAnchor("mentions-legales") },
+    ],
   };
-  return <footer className="bg-foreground text-white">
+
+  return (
+    <footer className="bg-foreground text-white">
       <div className="container-wide section-spacing">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-6">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-6">
+            <a href={logoHref} className="flex items-center gap-2 mb-6">
               <div className="w-10 h-10 rounded-xl gradient-brand flex items-center justify-center text-white font-bold text-xl">
                 J
               </div>
@@ -146,5 +127,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 }

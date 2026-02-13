@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight, Target, Settings, Rocket, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { AnchorLink } from "@/components/AnchorLink";
 
 const stepIcons = [Target, Settings, Rocket, BarChart3];
 
@@ -130,10 +131,10 @@ export function Deployment() {
             <div className="text-right">
               <p className="text-muted-foreground mb-4">{t("deployment.prereq.cta.text")}</p>
               <Button size="lg" className="gradient-brand text-white border-0" asChild>
-                <a href="#demo">
+                <AnchorLink to="demo">
                   {t("deployment.cta")}
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
+                </AnchorLink>
               </Button>
             </div>
           </div>

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { X, Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { AnchorLink } from "@/components/AnchorLink";
 
 export function BeforeAfter() {
   const { t } = useLanguage();
@@ -159,10 +160,10 @@ export function BeforeAfter() {
           className="text-center mt-12"
         >
           <Button size="lg" className="gradient-brand text-white border-0" asChild>
-            <a href="#demo">
+            <AnchorLink to="demo">
               {t("nav.demo")}
               <ArrowRight className="w-4 h-4 ml-2" />
-            </a>
+            </AnchorLink>
           </Button>
         </motion.div>
       </div>

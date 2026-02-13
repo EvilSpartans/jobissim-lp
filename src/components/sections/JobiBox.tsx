@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Video, Bot, Mic, Briefcase, Sparkles, MapPin, Camera, Monitor, Lightbulb, Shield, ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { AnchorLink } from "@/components/AnchorLink";
 
 export function JobiBox() {
   const { t } = useLanguage();
@@ -75,16 +76,16 @@ export function JobiBox() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="gradient-brand text-white border-0" asChild>
-                <a href="#demo">
+                <AnchorLink to="demo">
                   {t("jobibox.cta")}
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
+                </AnchorLink>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="#jobibox-video">
+                <AnchorLink to="jobibox-video">
                   <Play className="w-4 h-4 mr-2" />
                   {t("hero.cta.video")}
-                </a>
+                </AnchorLink>
               </Button>
             </div>
           </motion.div>

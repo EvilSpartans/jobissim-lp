@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Play, ArrowRight, Sparkles, Video, Mic, BookOpen, Bot, Target, LayoutDashboard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { AnchorLink } from "@/components/AnchorLink";
 import heroVisual from "@/assets/landing/hero-visual.png";
 
 export function Hero() {
@@ -66,16 +67,16 @@ export function Hero() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button size="lg" className="gradient-brand text-white border-0 gap-2 text-base px-8" asChild>
-                <a href="#demo">
+                <AnchorLink to="demo">
                   {t("hero.cta.demo")}
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </AnchorLink>
               </Button>
               <Button size="lg" variant="outline" className="gap-2 text-base" asChild>
-                <a href="#plateforme">
+                <AnchorLink to="plateforme">
                   <Play className="w-4 h-4" />
                   {t("hero.cta.video")}
-                </a>
+                </AnchorLink>
               </Button>
             </div>
 

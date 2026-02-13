@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Truck, Video, Bot, Mic, Glasses, MessageSquare, Send, MapPin, Users, Building2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { AnchorLink } from "@/components/AnchorLink";
 
 export function JobiTruck() {
   const { t } = useLanguage();
@@ -85,10 +86,10 @@ export function JobiTruck() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="gradient-brand text-white border-0" asChild>
-                <a href="#demo">
+                <AnchorLink to="demo">
                   {t("jobitruck.cta")}
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
+                </AnchorLink>
               </Button>
             </div>
           </motion.div>
@@ -160,10 +161,10 @@ export function JobiTruck() {
           className="text-center"
         >
           <Button size="lg" className="gradient-brand text-white border-0" asChild>
-            <a href="#demo">
+            <AnchorLink to="demo">
               {t("jobitruck.cta")}
               <ArrowRight className="w-4 h-4 ml-2" />
-            </a>
+            </AnchorLink>
           </Button>
         </motion.div>
       </div>

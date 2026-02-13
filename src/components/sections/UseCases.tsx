@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { GraduationCap, BookOpen, Users, Building2, ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { AnchorLink } from "@/components/AnchorLink";
 export function UseCases() {
   const {
     t
@@ -139,10 +140,10 @@ export function UseCases() {
 
                   <div className="mt-auto">
                     <Button size="sm" className="gradient-brand text-white border-0 gap-2 text-xs" asChild>
-                      <a href="#demo">
+                      <AnchorLink to="demo">
                         {t("nav.demo")} {useCase.title}
                         <ArrowRight className="w-4 h-4" />
-                      </a>
+                      </AnchorLink>
                     </Button>
                   </div>
                 </div>

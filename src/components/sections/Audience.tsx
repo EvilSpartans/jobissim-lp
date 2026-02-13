@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { GraduationCap, BookOpen, Users, Building2, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { AnchorLink } from "@/components/AnchorLink";
 
 export function Audience() {
   const { t } = useLanguage();
@@ -140,10 +141,10 @@ export function Audience() {
                 ))}
               </ul>
               <Button className="gradient-brand text-white border-0" asChild>
-                <a href="#plateforme">
+                <AnchorLink to="plateforme">
                   {t("announcement.discover")}
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
+                </AnchorLink>
               </Button>
             </div>
             <div className="w-full md:w-80 h-64 bg-gradient-to-br from-violet-100 to-orange-100 rounded-2xl flex items-center justify-center">

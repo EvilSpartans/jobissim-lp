@@ -7,6 +7,10 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'); */
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   .react-landing {
     /* Core brand colors */
     --background: 0 0% 100%;

@@ -29,6 +29,7 @@ if (!customElements.get("react-landing")) {
             :host {
               display: block;
               font-family: Inter, system-ui, sans-serif;
+              scroll-behavior: smooth;
             }
 
             :host *, :host *::before, :host *::after {
