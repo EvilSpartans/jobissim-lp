@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Play, ArrowRight, Sparkles, Video, Mic, BookOpen, Bot, Target, LayoutDashboard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroVisual from "@/assets/hero-visual.png";
+import heroVisual from "@/assets/landing/hero-visual.png";
 
 export function Hero() {
   const { t } = useLanguage();

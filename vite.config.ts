@@ -18,4 +18,13 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    lib: {
+      entry: "src/webcomponent.tsx",
+      name: "LandingWC",
+      fileName: () => "landing.js",
+      formats: ["iife"],
+    },
+    cssCodeSplit: false,
+  },
 }));

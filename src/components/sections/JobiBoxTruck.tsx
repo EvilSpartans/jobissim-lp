@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { Video, Bot, Mic, Briefcase, Truck, ArrowRight, Sparkles, Shield, Camera, MapPin, Monitor, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import jobibox1 from "@/assets/jobibox-1.jpg";
-import jobibox2 from "@/assets/jobibox-2.jpg";
-import jobibox3 from "@/assets/jobibox-3.png";
-import jobitruck1 from "@/assets/jobitruck-1.jpeg";
-import jobitruck2 from "@/assets/jobitruck-2.jpg";
-import jobitruck3 from "@/assets/jobitruck-3.png";
-import jobitruck4 from "@/assets/jobitruck-4.png";
+import jobibox1 from "@/assets/landing/jobibox-1.jpg";
+import jobibox2 from "@/assets/landing/jobibox-2.jpg";
+import jobibox3 from "@/assets/landing/jobibox-3.png";
+import jobitruck1 from "@/assets/landing/jobitruck-1.jpeg";
+import jobitruck2 from "@/assets/landing/jobitruck-2.jpg";
+import jobitruck3 from "@/assets/landing/jobitruck-3.png";
+import jobitruck4 from "@/assets/landing/jobitruck-4.png";
 
 export function JobiBoxTruck() {
   const { t } = useLanguage();
